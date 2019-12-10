@@ -39,6 +39,13 @@ public class Quiz2_V2_PPL {
         Thread.sleep(20000);
         WebElement adminbutton = driver.findElement(By.className("meta-profile"));
         adminbutton.click();
+        //Assert
+        if(driver.getPageSource().contains(" - admin")){
+            System.out.println("Status user: Admin");
+        }
+        else{
+            System.out.println("Status user: User");
+        }
     }
     
 }
